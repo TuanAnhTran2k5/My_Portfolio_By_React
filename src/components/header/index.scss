@@ -1,0 +1,92 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  //   & <=> .header
+  &__logo h1 {
+    font-size: 40px;
+    background: linear-gradient(45deg, #7877c6, #78dbff, #ff77c6, #c677ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 300% 300%;
+    animation: gradients 3s ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(120, 119, 198, 0.5);
+  }
+
+  @keyframes gradients {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  &__link a {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 30px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: red;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+
+    &:hover {
+      color: red;
+      transform: scale(1.1);
+    }
+  }
+  #menu {
+    display: none;
+    align-items: center;
+    font-size: 25px;
+  }
+}
+
+// only screen and
+
+@media only screen and (max-width: 480px) {
+  .header {
+    padding: 10px 40px;
+    &__logo h1 {
+      font-size: 20px;
+    }
+
+    &__link a {
+      display: none;
+    }
+    #menu {
+      display: block;
+      right: 0;
+    }
+
+    
+  }
+}

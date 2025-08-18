@@ -1,0 +1,240 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 200px 0px 200px;
+  align-items: center;
+
+  &__content {
+    line-height: 1.8;
+    color: orange;
+    h2 {
+      font-size: 50px;
+      text-wrap: wrap;
+    }
+
+    h3 {
+      font-size: 40px;
+      padding-left: 30px;
+      text-wrap: wrap;
+    }
+
+    h1 {
+      font-size: 60px;
+      text-wrap: wrap;
+    }
+
+    .content__button {
+      margin-top: 30px;
+      margin-left: 15px;
+      display: flex;
+      gap: 20px;
+
+      button {
+        //  chung cho cả hai nút
+        border: none;
+        padding: 15px 25px;
+        border: 1px solid black;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: all 0.3s ease;
+      }
+      //Go a project?
+      .btn-project {
+        background-color: rgb(255, 81, 0);
+        color: rgb(243, 231, 5);
+
+        &:hover {
+          background-color: rgb(16, 222, 74);
+          color: purple;
+        }
+      }
+
+      // My resume
+      .btn-resume {
+        background-color: transparent;
+        color: #ccd6f6;
+        border: 2px solid rgb(255, 81, 0);
+
+        &:hover {
+          background-color: rgb(16, 222, 74);
+          color: black;
+          border-color: rgb(16, 222, 74);
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 400px;
+    height: 400px;
+    border-radius: 70px;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-right: 50px;
+    box-shadow: 0px 0px 20px 2px rgba(90, 208, 223, 0.75);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 70px;
+    }
+  }
+}
+
+.code {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px 100px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  // flex-wrap: wrap;
+  p {
+    font-size: 20px;
+    opacity: 0.5;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero {
+    display: block;
+    padding: 20px 40px 0px 40px;
+    justify-items: center;
+
+    &__content {
+      justify-items: center;
+      line-height: 1.3;
+      h2 {
+        font-size: 30px;
+      }
+
+      h3 {
+        font-size: 25px;
+        padding-left: 15px;
+      }
+
+      h1 {
+        font-size: 35px;
+      }
+
+      .content__button {
+        margin-top: 15px;
+        display: flex;
+        gap: 20px;
+
+        button {
+          //  chung cho cả hai nút
+          font-size: 14px;
+
+          // My resume
+        }
+      }
+    }
+
+    &__img {
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      margin-top: 30px;
+      margin-right: 0px;
+    }
+  }
+
+  .code {
+    display: flex;
+    padding: 15px 10px;
+    p {
+      font-size: 15px;
+      opacity: 0.5;
+    }
+  }
+}
+
+// ===============================About Me==============================================
+
+.about {
+  display: flex;
+  margin: 0 auto;
+  max-width: 75%;
+  justify-content: space-between;
+  margin-top: 0px;
+  gap: 50px;
+
+  &__services {
+    flex: 1;
+    align-content: center;
+    margin-top: 40px;
+
+    .about__service-item {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 70px;
+
+      .about__service-icon {
+        font-size: 50px;
+        transition: all 0.8s ease;
+
+        &:hover {
+          transform: rotate(360deg);
+          color: rgb(255, 123, 0);
+        }
+      }
+
+      .about__service-title {
+        display: flex;
+        align-items: center;
+        text-wrap: wrap;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+
+    h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-wrap: wrap;
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    flex-wrap: wrap-reverse;
+    gap: 10px;
+    &__services {
+      flex: 1;
+      .about__service-item {
+        margin-bottom: 20px;
+        .about__service-icon {
+          font-size: 30px;
+        }
+      }
+    }
+
+    &__content {
+      flex: 1;
+
+      h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 25px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

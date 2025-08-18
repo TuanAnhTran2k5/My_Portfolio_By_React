@@ -1,0 +1,33 @@
+.card {
+  position: relative;
+  width: 350px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.025);
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+   
+  }
+
+  h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.4); /* nền mờ để chữ dễ đọc */
+    padding: 8px 10px;
+    text-align: center;
+  }
+}
