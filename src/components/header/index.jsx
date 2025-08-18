@@ -3,7 +3,6 @@ import "./index.scss";
 import { MenuOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
-
 function Header() {
   return (
     <div className="header">

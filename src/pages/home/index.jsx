@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/header";
 import ListProject from "../../components/list-project";
 import Footer from "../../components/footer";
@@ -11,6 +11,19 @@ import {
 } from "@ant-design/icons";
 
 function Home() {
+  const text = "Software Engineer";
+  const [displayText, setDisplayText] = useState("");
+
+  useEffect(() => {
+    let i = 0;
+    const typing = setInterval(() => {
+      setDisplayText(text.substring(0, i + 1));
+      i++;
+      if (i === text.length) clearInterval(typing);
+    }, 100); // tốc độ gõ (ms)
+    return () => clearInterval(typing);
+  }, []);
+
   return (
     <div>
       <Header />
@@ -18,8 +31,9 @@ function Home() {
         <div className="hero">
           <div className="hero__content">
             <h2>Hello.</h2>
-            <h3>I'am Tuan Anh</h3>
-            <h1>Software Engineer</h1>
+            <h3>I'am Tuan Anh 😎</h3>
+              <h1>{displayText}</h1> {/* typing effect ở đây */}
+            {/* <h1>Software Engineer</h1> */}
             <div className="content__button">
               <Link to="/project">
                 <button className="btn-project">My Projects</button>

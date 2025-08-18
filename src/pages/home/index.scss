@@ -10,12 +10,14 @@
     h2 {
       font-size: 50px;
       text-wrap: wrap;
+    //   text-shadow: 3px 2px 12px orange;
     }
 
     h3 {
       font-size: 40px;
       padding-left: 30px;
       text-wrap: wrap;
+      
     }
 
     h1 {
@@ -52,14 +54,34 @@
 
       // My resume
       .btn-resume {
+        position: relative;
         background-color: transparent;
         color: #ccd6f6;
         border: 2px solid rgb(255, 81, 0);
+        padding: 10px 20px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background-color: rgb(16, 222, 74);
+          transition: all 0.4s ease;
+          z-index: -1;
+        }
 
         &:hover {
-          background-color: rgb(16, 222, 74);
           color: black;
           border-color: rgb(16, 222, 74);
+
+          &::before {
+            left: 0;
+          }
         }
       }
     }

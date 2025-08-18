@@ -6,7 +6,9 @@ function PageAbout() {
   return (
     <div>
       <Header/>
-    
+      <div>
+        
+      </div>
       <Footer/>
     </div>
   )
