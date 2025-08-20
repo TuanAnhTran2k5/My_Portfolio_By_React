@@ -1,7 +1,10 @@
+@import "/src/styles/mixin/layout.scss";
 .container {
   padding: 50px 200px 0px 200px;
   text-align: center;
-
+  @include sp {
+    padding: 10px 40px 0px 40px;
+  }
   &__list {
     h1 {
       font-size: 50px;
@@ -15,14 +18,8 @@
       gap: 20px;
       justify-content: center;
     }
-  }
-}
 
-@media (max-width: 480px) {
-  .container {
-    padding: 10px 40px 0px 40px;
-
-    &__list {
+    @include sp {
       h1 {
         font-size: 30px;
         margin-bottom: 15px;

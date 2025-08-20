@@ -1,3 +1,4 @@
+@import "/src/styles/mixin/layout.scss";
 .header {
   display: flex;
   align-items: center;
@@ -9,6 +10,10 @@
   right: 0;
   z-index: 10;
 
+  @include sp {
+    padding: 10px 40px;
+  }
+
   //   & <=> .header
   &__logo h1 {
     font-size: 40px;
@@ -19,6 +24,10 @@
     background-size: 300% 300%;
     animation: gradients 3s ease-in-out infinite;
     text-shadow: 0 0 30px rgba(120, 119, 198, 0.5);
+
+    @include sp {
+      font-size: 20px;
+    }
   }
 
   @keyframes gradients {
@@ -39,55 +48,20 @@
     color: white;
     font-size: 20px;
     font-weight: 500;
-    transition: all 0.3s ease-in-out;
-    position: relative;
 
-    &:after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background-color: red;
-      bottom: -4px;
-      left: 50%;
-      transform: translateX(-50%);
-      transition: width 0.3s ease-in-out;
-    }
-
-    &:hover:after {
-      width: 100%;
-    }
-
-    &:hover {
-      color: red;
-      transform: scale(1.1);
+    @include style-line;
+    @include sp {
+      display: none;
     }
   }
   #menu {
     display: none;
     align-items: center;
     font-size: 25px;
-  }
-}
 
-// only screen and
-
-@media only screen and (max-width: 480px) {
-  .header {
-    padding: 10px 40px;
-    &__logo h1 {
-      font-size: 20px;
-    }
-
-    &__link a {
-      display: none;
-    }
-    #menu {
+    @include sp {
       display: block;
       right: 0;
     }
-
   }
 }
-
-
