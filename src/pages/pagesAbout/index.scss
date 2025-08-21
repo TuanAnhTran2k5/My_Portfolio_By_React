@@ -2,7 +2,7 @@
 .containerAb {
   padding: 50px 150px 20px 150px;
   @include sp {
-    padding: 20px 40px 20px 40px;
+    padding: 40px 40px 20px 40px;
   }
   &__heroheader {
     display: flex;
@@ -39,7 +39,7 @@
     }
 
     .myInfo {
-        padding-top: 120px;
+      padding-top: 120px;
       line-height: 50px;
       h2 {
         color: red;
@@ -55,7 +55,7 @@
       }
 
       @include sp {
-         padding-top: 0px;
+        padding-top: 0px;
         margin-top: 30px;
         line-height: 30px;
         text-align: center;
@@ -70,8 +70,76 @@
     }
   }
 
-  &__abMe{
-    background-color: rgb(255, 0, 0);
-    margin-top: 20px;
+  &__abMe {
+    margin-top: 80px;
+    @include sp {
+      margin-top: 5px;
+    }
+    .introduce {
+      padding: 10px;
+      line-height: 1.9;
+      h1 {
+        font-size: 40px;
+        color: orangered;
+      }
+      p {
+        margin-left: 20px;
+        font-size: 20px;
+        line-height: 1.4;
+        text-wrap: wrap;
+        margin-bottom: 15px;
+      }
+
+      @include sp {
+        padding: 5px;
+        line-height: 1.5;
+        h1 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .mySkills {
+      line-height: 1.9;
+      padding: 10px;
+
+      h1 {
+        color: red;
+        font-size: 40px;
+      }
+      p {
+        margin-left: 20px;
+        font-size: 20px;
+        line-height: 1.4;
+        text-wrap: wrap;
+        margin-bottom: 15px;
+
+        .icon {
+          color: white;
+          transition: all 0.3s ease;
+          margin-right: 10px;
+          cursor: pointer;
+          font-size: 25px;
+          &:hover {
+            color: aqua;
+            transform: scale(1.2)
+          }
+        }
+      }
+
+      @include sp {
+        padding: 5px;
+        line-height: 1.5;
+        h1 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
   }
 }

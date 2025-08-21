@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.scss";
-import { MenuOutlined } from "@ant-design/icons";
+import { CloseSquareOutlined, MenuOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="header">
       <div className="header__logo">
@@ -11,11 +13,20 @@ function Header() {
       </div>
 
       <nav className="header__link">
-        <Link to={`/`}>Home</Link>
-        <Link to={`/about`}>About</Link>
-        <Link to={`/project`}>Projects</Link>
-        <Link to={`/contacts`}>Contacts</Link>
-        <MenuOutlined id="menu" />
+        <div className={`menu ${isOpen ? "active" : ""}`}>
+          <Link to={`/`}>Home</Link>
+          <Link to={`/about`}>About</Link>
+          <Link to={`/project`}>Projects</Link>
+          <Link to={`/contacts`}>Contacts</Link>
+        </div>
+
+        <div className="menusp">
+          {isOpen ? (
+            <CloseSquareOutlined onClick={() => setIsOpen(false)} />
+          ) : (
+            <MenuOutlined onClick={() => setIsOpen(true)} />
+          )}
+        </div>
       </nav>
     </div>
   );

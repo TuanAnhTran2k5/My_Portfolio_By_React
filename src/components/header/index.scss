@@ -41,27 +41,56 @@
     }
   }
 
-  &__link a {
-    display: inline-block;
-    text-decoration: none;
-    margin-right: 30px;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
 
-    @include style-line;
-    @include sp {
-      display: none;
-    }
-  }
-  #menu {
-    display: none;
+  &__link {
+    display: flex;
     align-items: center;
-    font-size: 25px;
 
-    @include sp {
-      display: block;
-      right: 0;
+    .menu {
+      display: flex;
+      gap: 40px;
+      a {
+        display: inline;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        @include style-line;
+     
+      }
+      @include sp {
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        gap: 30px;
+        padding: 50px 40px;
+        transition: right 0.3s ease;
+        a{
+          font-size: 15px;
+        }
+      }
+
+      &.active {
+        @include sp {
+          right: 0; 
+        }
+      }
+    }
+
+    .menusp {
+      display: none;
+      align-items: center;
+      font-size: 25px;
+      cursor: pointer;
+
+      @include sp {
+        display: block;
+        z-index: 10;
+      }
     }
   }
 }
