@@ -1,12 +1,13 @@
 @import "/src/styles/mixin/layout.scss";
 .container {
-  padding: 50px 100px 0px 100px;
-  text-align: center;
+  padding: 30px 100px 0px 100px;
+
   @include sp {
     padding: 10px 40px 0px 40px;
   }
   &__list {
     h1 {
+      margin-left: 45px;
       font-size: 50px;
       color: orangered;
       margin-bottom: 20px;
@@ -20,7 +21,9 @@
     }
 
     @include sp {
+      text-align: center;
       h1 {
+        margin-left: 0px;
         font-size: 30px;
         margin-bottom: 15px;
       }
