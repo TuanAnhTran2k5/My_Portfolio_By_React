@@ -1,0 +1,104 @@
+@import "/src/styles/mixin/layout.scss";
+.contact-container {
+  padding: 80px 200px 50px 200px;
+  justify-items: center;
+
+  h2 {
+    font-size: 30px;
+    color: orangered;
+    text-wrap: wrap;
+    text-align: center;
+  }
+
+  @include sp {
+    padding: 60px 40px 20px 40px;
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  &__form-contact {
+    margin-top: 40px;
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(71,149,255,0.56);
+    border-radius: 15px;
+    padding: 15px 20px;
+    background-color: rgba(3, 59, 119, 0.7);
+   box-shadow: 0px 0px 8px 4px rgba(71,149,255,0.56);
+    @include sp {
+      width: 100%;
+    }
+    #title {
+      font-size: 30px;
+      color: rgb(239, 7, 227);
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      @include sp {
+        font-size: 20px;
+      }
+    }
+    label {
+      font-size: 18px;
+      padding: 5px;
+      @include sp {
+        font-size: 14px;
+      }
+    }
+
+    .input {
+      width: 100%;
+      padding: 8px 5px;
+      border: none;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 18px;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-bottom: 10px;
+      @include sp {
+        font-size: 14px;
+      }
+    }
+
+    .textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      margin-left: 5px;
+      margin-right: 5px;
+      font-size: 18px;
+      resize: vertical;
+      @include sp {
+        font-size: 14px;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 40px;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: 400;
+      text-align: center;
+      background: rgb(255, 136, 0);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 10px 5px;
+
+      &:hover {
+        background: #0ade43;
+      }
+      @include sp {
+        font-size: 18px;
+      }
+    }
+  }
+}

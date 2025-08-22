@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import Header from '../../components/header'
-import ListProject from '../../components/list-project';
-import Footer from '../../components/footer';
-import "./index.scss"
+import React, { useEffect, useState } from "react";
+import Header from "../../components/header";
+import ListProject from "../../components/list-project";
+import Footer from "../../components/footer";
+import "./index.scss";
 
 function PagesProject() {
-
-    const text = "Welcome to my personal project🤡";
+  const text = "Welcome to my personal project🤡";
   const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {
@@ -20,15 +19,19 @@ function PagesProject() {
   }, []);
   return (
     <div>
-      <Header/>
+      <Header />
       <div className="container_PJS">
         <h1>{displayText}</h1>
+        <p>
+          Below are personal projects that I have been working on during my
+          daily studies and practice.
+        </p>
       </div>
-      <ListProject title={"My Project"}/>
-      <ListProject title={"New"}/>
-      <Footer/>
+      <ListProject title={"My Project"} />
+      <ListProject title={"New"} />
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default PagesProject;

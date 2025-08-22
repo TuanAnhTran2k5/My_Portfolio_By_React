@@ -13,4 +13,16 @@
     font-size: 30px;
   }
   }
+
+  p{
+    font-size: 30px;
+    padding: 5px 200px;
+    text-align: center;
+    text-wrap: wrap;
+
+    @include sp{
+      font-size: 20px;
+      padding: 5px 20px;
+    }
+  }
 }

@@ -7,7 +7,7 @@
   }
   &__list {
     h1 {
-      margin-left: 45px;
+      margin-left: 110px;
       font-size: 50px;
       color: orangered;
       margin-bottom: 20px;
@@ -23,7 +23,7 @@
     @include sp {
       text-align: center;
       h1 {
-        margin-left: 1px;
+        margin-left: 0px;
         font-size: 30px;
         margin-bottom: 15px;
       }
